@@ -67,6 +67,23 @@ int main(){
             }
 
             case 4: {
+                int dni_buscar;
+                Empleado* emp_mostrar = 0;
+                do {
+                    cout<<"Ingrese dni de empleado a mostrar o 0 para regresar al menu: "<<endl;
+                    cin>>dni_buscar;
+                    if (dni_buscar == 0) {
+                        break;
+                    }
+                    emp_mostrar = lista.buscar_empleado(dni_buscar);
+                    if (emp_mostrar == 0){
+                        cout<<"Error: no existe cliente con dni ingresado"<<endl;
+                    } else {
+                        emp_mostrar->mostrar();
+                    }
+                   
+                } while (emp_mostrar == 0);
+
                 break;
             }
 

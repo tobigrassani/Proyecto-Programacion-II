@@ -49,10 +49,10 @@ Empleado* Lista::buscar_empleado (int dni_buscar){
         for (int i = 0; i < contadoremp; i++) {
             if (E[i]->get_dni() == dni_buscar){
                 return E[i];
-            } else {
-                return 0;
             }
         }
+
+        return 0;
     }
 
 }
