@@ -1,3 +1,6 @@
+#ifndef EMPLEADO_H
+#define EMPLEADO_H
+
 #include <iostream>
 #include <string>
 #include "cuenta.h"
@@ -7,16 +10,16 @@ class Empleado{
 
     protected:
 
-    int dni;
-    string nombre;
-    string apellido;
-    string mail;
-    bool estado; //0 baja, 1 alta
-    Cuenta A;
+    int dni = 0;
+    string nombre = "nombre";
+    string apellido = "apellido";
+    string mail = "mail@dominio.com";
+    bool estado = 1; //0 baja, 1 alta
+    Cuenta cuenta;
 
     public:
 
-    Empleado();
+    Empleado() = default;
 
     void set_dni(int x);
     void set_nombre(string x);
@@ -29,7 +32,9 @@ class Empleado{
     string get_mail();
     bool get_estado();
 
+    virtual void alta();
+    void baja();
     virtual void mostrar();
-
-    ~Empleado();
 };
+
+#endif

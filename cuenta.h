@@ -1,3 +1,6 @@
+#ifndef CUENTA_H
+#define CUENTA_H
+
 #include <iostream>
 #include <string>
 using namespace std;
@@ -5,13 +8,14 @@ using namespace std;
 class Cuenta{
     
     private:
-    int num_cuenta;
-    float saldo;
-    float sueldo;
+    
+    int num_cuenta = 0;
+    float saldo = 0;
+    float sueldo = 0;
     
     public:
 
-    Cuenta();
+    Cuenta() = default;
     void set_num_cuenta(int x);
     void set_saldo(float x);
     void set_sueldo(float x);
@@ -22,4 +26,6 @@ class Cuenta{
     void extraccion(float x);
     
 
-}
+};
+
+#endif

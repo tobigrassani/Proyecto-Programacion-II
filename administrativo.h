@@ -1,20 +1,24 @@
+#pragma once
+
 #include <iostream>
 #include <string>
 #include "empleado.h"
 using namespace std;
 
-class Admin:public Empleado{
+class Administrativo:public Empleado{
 
     private:
 
-    string puesto;
+    string puesto = "puesto";
 
     public:
 
-    Admin();
+    Administrativo() = default;
+
+    void set_puesto(string x);
+    
+    void alta();
     void mostrar();
-
-
 
 };
 

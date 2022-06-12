@@ -1,8 +1,7 @@
+#pragma once
+
 #include <iostream>
 #include <string>
-#include "empleado.h"
-#include "profesional.h"
-#include "cuenta.h"
 using namespace std;
 
 class Tarjeta{
@@ -15,7 +14,7 @@ class Tarjeta{
     
     public:
 
-    Tarjeta();
+    Tarjeta() = default;
 
     void set_num_tarjeta(int x);
     void set_lim_compra(int x);
@@ -27,4 +26,4 @@ class Tarjeta{
 
     void tipo_tarjeta(float sueldo);
 
-}
+};
