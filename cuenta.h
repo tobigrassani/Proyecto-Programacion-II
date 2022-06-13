@@ -22,6 +22,8 @@ class Cuenta{
 
     int get_num_cuenta();
 
+    void alta_cuenta();
+    void mostrar_cuenta();
     void deposito(float x);
     void extraccion(float x);
     

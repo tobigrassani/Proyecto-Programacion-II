@@ -23,6 +23,8 @@ void Profesional::mostrar() {
     cout<<"- Actividad: "<<actividad<<endl;
     cout<<"- Tiempo de Servicio: "<<tiempo_servicio<<endl;
 
+    cuenta.mostrar_cuenta();
+
 }
 
 void Profesional::alta() {
@@ -43,6 +45,8 @@ void Profesional::alta() {
     cout<<"- Tiempo de servicio: "<<endl;
     cin>>ts;
     set_tiempo(ts);
+
+    cuenta.alta_cuenta();
 
 }
 

@@ -13,7 +13,7 @@ class Profesional:public Empleado{
     string titulo = "titulo";
     string actividad = "actividad";
     float tiempo_servicio = 0;
-    Tarjeta B;
+    Tarjeta tarjeta;
 
     public:
 

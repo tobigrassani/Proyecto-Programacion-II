@@ -6,6 +6,7 @@ using namespace std;
 void Administrativo::set_puesto(string x) {
     puesto = x;
 }
+
 void Administrativo::alta() {
     
     string p;
@@ -16,6 +17,8 @@ void Administrativo::alta() {
     cin>>p;
     set_puesto(p);
 
+    cuenta.alta_cuenta();
+
 }
 
 void Administrativo::mostrar() {
@@ -23,4 +26,6 @@ void Administrativo::mostrar() {
     Empleado::mostrar();
 
     cout<<"- Puesto: "<<puesto<<endl;
+
+    cuenta.mostrar_cuenta();
 }
