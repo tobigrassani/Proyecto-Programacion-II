@@ -8,9 +8,9 @@ class Tarjeta{
     
     private:
 
-    int num_tarjeta;
-    int lim_compra;
-    string tipo;
+    int num_tarjeta = 0;
+    int lim_compra = 0;
+    string tipo = "tipo";
     
     public:
 

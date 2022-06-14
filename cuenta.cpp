@@ -43,3 +43,33 @@ void Cuenta::mostrar_cuenta() {
     cout<<"- Saldo: "<<saldo<<endl;
     
 }
+
+void Cuenta::deposito(float x) {
+    if (x < 0) {
+
+        cout<<"Error: No se puede depositar un monto negativo"<<endl;
+
+    } else {
+
+        saldo += x;
+        cout<<"Deposito exitoso "<<endl;
+        cout<<"Saldo actual: "<<saldo<<endl;
+    }
+}
+
+void Cuenta::extraccion(float x) {
+
+    if (x > saldo) {
+    
+        cout<<"Saldo insuficiente. Se extrajo: "<<saldo<<endl;
+        saldo = 0;
+        cout<<"Saldo actual: "<<saldo<<endl;
+
+    } else {
+
+        cout<<"Extracción exitosa "<<endl;
+        saldo -= x;
+        cout<<"Saldo actual: "<<saldo<<endl;
+
+    }
+}

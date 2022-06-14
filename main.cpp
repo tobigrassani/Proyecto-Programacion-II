@@ -14,6 +14,7 @@ int main(){
 
     do {
         cout<<"------------------------------------------------------"<<endl;
+        cout<<"Ingrese número del 1 al 7 según accion a realizar: "<<endl;
         cout<<"Menu de opciones: "<<endl;
         cout<<"1 Dar de alta a empleado"<<endl;
         cout<<"2 Dar de baja a empleado"<<endl;
@@ -23,7 +24,6 @@ int main(){
         cout<<"6 Extraccion de dinero"<<endl;
         cout<<"7 Finalizar"<<endl;
 
-        cout<<"Ingrese número del 1 al 7 según accion a realizar: "<<endl;
         cin>>op;
 
         switch(op){
@@ -70,7 +70,7 @@ int main(){
                 int dni_buscar;
                 Empleado* emp_mostrar = 0;
                 do {
-                    cout<<"Ingrese dni de empleado a mostrar o 0 para regresar al menu: "<<endl;
+                    cout<<"Ingrese dni de empleado o 0 para regresar al menu: "<<endl;
                     cin>>dni_buscar;
                     if (dni_buscar == 0) {
                         break;
@@ -88,10 +88,48 @@ int main(){
             }
 
             case 5: {
+                int dni_buscar;
+                float monto_depositar;
+                Empleado* emp_depositar = 0;
+                do {
+                    cout<<"Ingrese dni de empleado o 0 para regresar al menu: "<<endl;
+                    cin>>dni_buscar;
+                    if (dni_buscar == 0) {
+                        break;
+                    }
+                    emp_depositar = lista.buscar_empleado(dni_buscar);
+                    if (emp_depositar == 0){
+                        cout<<"Error: no existe cliente con dni ingresado"<<endl;
+                    } else {
+                        cout<<"Ingrese monto a depositar: "<<endl;
+                        cin>>monto_depositar;
+                        (emp_depositar->get_cuenta()).deposito(monto_depositar);
+                    }
+                } while (emp_depositar == 0);
                 break;
+                
             }
 
             case 6: {
+                int dni_buscar;
+                float monto_extraer;
+                Empleado* emp_extraer = 0;
+                do {
+                    cout<<"Ingrese dni de empleado o 0 para regresar al menu: "<<endl;
+                    cin>>dni_buscar;
+                    if (dni_buscar == 0) {
+                        break;
+                    }
+                    emp_extraer = lista.buscar_empleado(dni_buscar);
+                    if (emp_extraer == 0){
+                        cout<<"Error: no existe cliente con dni ingresado"<<endl;
+                    } else {
+
+                        cout<<"Ingrese monto a extraer: "<<endl;
+                        cin>>monto_extraer;
+                        (emp_extraer->get_cuenta()).extraccion(monto_extraer);
+                    }
+                } while (emp_extraer == 0);
                 break;
             }
 

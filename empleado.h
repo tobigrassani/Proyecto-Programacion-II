@@ -31,6 +31,7 @@ class Empleado{
     string get_apellido();
     string get_mail();
     bool get_estado();
+    Cuenta get_cuenta();
 
     virtual void alta();
     void baja();
