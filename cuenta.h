@@ -20,8 +20,8 @@ class Cuenta{
     void set_saldo(float x);
     void set_sueldo(float x);
 
-    int get_num_cuenta();
-
+    float get_sueldo();
+    
     void alta_cuenta();
     void mostrar_cuenta();
     void deposito(float x);

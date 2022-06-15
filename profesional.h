@@ -12,7 +12,7 @@ class Profesional:public Empleado{
 
     string titulo = "titulo";
     string actividad = "actividad";
-    float tiempo_servicio = 0;
+    string tiempo_servicio = "tiempo de servicio";
     Tarjeta tarjeta;
 
     public:
@@ -21,7 +21,7 @@ class Profesional:public Empleado{
 
     void set_titulo(string x);
     void set_actividad(string x);
-    void set_tiempo(float x);
+    void set_tiempo(string x);
 
     void mostrar();
     void alta();

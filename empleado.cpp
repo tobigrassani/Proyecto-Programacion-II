@@ -68,7 +68,7 @@ void Empleado::baja() {
     estado = 0;
 }
 
-Cuenta Empleado::get_cuenta() {
+Cuenta& Empleado::get_cuenta() {
     return cuenta;
 }
 

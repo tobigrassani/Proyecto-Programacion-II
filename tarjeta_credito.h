@@ -24,6 +24,6 @@ class Tarjeta{
     int get_lim_compra();
     string get_tipo();
 
-    void tipo_tarjeta(float sueldo);
+    string tipo_tarjeta(float sueldo);
 
 };

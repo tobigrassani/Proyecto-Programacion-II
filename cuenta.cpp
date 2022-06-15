@@ -73,3 +73,7 @@ void Cuenta::extraccion(float x) {
 
     }
 }
+
+float Cuenta::get_sueldo() {
+    return sueldo;
+}
