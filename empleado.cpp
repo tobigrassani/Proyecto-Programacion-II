@@ -5,8 +5,29 @@
 using namespace std;
 
 
-void Empleado::set_dni(int x) {
-    dni = x;
+void Empleado::set_dni(int doc) {
+    do {
+
+        try {
+            if (doc == 0) throw 0;
+            if (doc < 0) throw 1;
+        }
+        catch (int error){
+            if (error == 0) {
+                cout<<"Error: el dni no puede ser igual a 0 "<<endl;
+                cout<<"- DNI:"<<endl;
+                cin>>doc;
+            }
+            if (error == 1) {
+                cout<<"Error: el dni no puede ser menor a 0 "<<endl;
+                cout<<"- DNI:"<<endl;
+                cin>>doc;
+            }
+        }
+
+    } while (doc<=0);
+   
+    dni = doc;
 }
 
 void Empleado::set_nombre(string x) {

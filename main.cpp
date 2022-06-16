@@ -29,7 +29,6 @@ int main(){
         switch(op){
             
             case 1: {
-
                 int tipo;
                 cout<<"Ingrese 0 para Administrativo o 1 para Profesional "<<endl;
                 cin>>tipo;

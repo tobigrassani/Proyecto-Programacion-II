@@ -30,11 +30,11 @@ string Tarjeta::get_tipo() {
 
 string Tarjeta::tipo_tarjeta(float sueldo) {
     
-    if (sueldo>=300000) {
+    if (sueldo >= 300000) {
         
         tipo = "Oro";
 
-    } else if (sueldo>=200000) {
+    } else if (sueldo >= 200000) {
         
         tipo = "Plata";
 

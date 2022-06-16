@@ -23,7 +23,8 @@ void Lista::agregar_empleado(int tipo) {
 
 void Lista::listado(){
 
-    cout<<"\n Listado de clientes: "<<endl;
+    cout<<"\n"<<endl;
+    cout<<"Listado de clientes: "<<endl;
 
     if (contadoremp == 0) {
         

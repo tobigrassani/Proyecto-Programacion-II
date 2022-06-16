@@ -16,9 +16,9 @@ class Cuenta{
     public:
 
     Cuenta() = default;
-    void set_num_cuenta(int x);
-    void set_saldo(float x);
-    void set_sueldo(float x);
+    void set_num_cuenta(int numc);
+    void set_saldo(float sa);
+    void set_sueldo(float su);
 
     float get_sueldo();
     

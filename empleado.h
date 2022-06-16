@@ -21,7 +21,7 @@ class Empleado{
 
     Empleado() = default;
 
-    void set_dni(int x);
+    void set_dni(int doc);
     void set_nombre(string x);
     void set_apellido(string x);
     void set_mail(string x);

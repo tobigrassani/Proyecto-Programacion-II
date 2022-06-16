@@ -5,25 +5,55 @@
 
 using namespace std;
 
-void Cuenta::set_num_cuenta(int x) {
-    num_cuenta = x;
+void Cuenta::set_num_cuenta(int numc) {
+
+    do {
+        if (numc < 0) {
+            cout<<"Error: el numero de cuenta no puede ser negativo "<<endl;
+            cout<<"- Número de cuenta:"<<endl;
+            cin>>numc;
+        }
+
+    } while (numc < 0);
+   
+    num_cuenta = numc;
 }
 
-void Cuenta::set_saldo(float x) {
-    saldo = x;
+void Cuenta::set_saldo(float sa) {
+     do {
+
+        if (sa < 0) {
+            cout<<"Error: el saldo no puede ser negativo "<<endl;
+            cout<<"- Saldo: "<<endl;
+            cin>>sa;
+            saldo = sa;
+        }
+
+    } while (sa < 0);
+   
+    saldo = sa;
 }
 
-void Cuenta::set_sueldo(float x) {
-    sueldo = x;
+void Cuenta::set_sueldo(float su) {
+    do {
+        if (su < 0) {
+            cout<<"Error: el sueldo no puede ser negativo "<<endl;
+            cout<<"- Sueldo:"<<endl;
+            cin>>su;
+        }
+            
+    } while (su < 0);
+
+    sueldo = su;
 }
 
 void Cuenta::alta_cuenta(){
-    int nc;
-    float sueldo, saldo;
+    int numc = 0;
+    float sueldo = 0, saldo = 0;
 
     cout<<"- Número de cuenta: "<<endl;
-    cin>>nc;
-    set_num_cuenta(nc);
+    cin>>numc;
+    set_num_cuenta(numc);
 
     cout<<"- Sueldo: "<<endl;
     cin>>sueldo;
@@ -59,7 +89,11 @@ void Cuenta::deposito(float x) {
 
 void Cuenta::extraccion(float x) {
 
-    if (x > saldo) {
+    if (x < 0) {
+
+        cout<<"Error: No se puede extraer un monto negativo"<<endl;
+
+    } else if (x > saldo) {
     
         cout<<"Saldo insuficiente. Se extrajo: "<<saldo<<endl;
         saldo = 0;
